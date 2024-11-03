@@ -1,6 +1,41 @@
 <button (click)="getClientes()">Get Clientes</button>
 <button (click)="getPedidos()">Get Pedidos</button>
 <button (click)="getComerciales()">Get Comerciales</button>
+<form [formGroup]="myForm" (ngSubmit)="postCliente()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+  
+    <label for="apellido1">Primer Apellido:</label>
+    <input id="apellido1" formControlName="apellido1" type="text" />
+  
+    <label for="apellido2">Segundo Apellido:</label>
+    <input id="apellido2" formControlName="apellido2" type="text" />
+  
+    <label for="ciudad">Ciudad:</label>
+    <input id="ciudad" formControlName="ciudad" type="text" />
+  
+    <label for="categoria">Categoría:</label>
+    <input id="categoria" formControlName="categoria" type="text" />
+  
+    <button type="submit">Enviar</button>
+</form>
+
+<form [formGroup]="myForm2" (ngSubmit)="postPedido()">
+    <label for="total">Total:</label>
+    <input id="total" formControlName="total" type="number" />
+  
+    <label for="fecha">Fecha:</label>
+    <input id="fecha" formControlName="fecha" type="date" />
+  
+    <label for="cliente">Cliente:</label>
+    <input id="cliente" formControlName="cliente" type="number" />
+  
+    <label for="comercial">Comercial:</label>
+    <input id="comercial" formControlName="comercial" type="number" />
+  
+    <button type="submit">Enviar</button>
+</form>
+
 <p>{{title}}</p>
 
 <router-outlet />

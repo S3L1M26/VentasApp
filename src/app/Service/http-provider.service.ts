@@ -36,4 +36,31 @@ export class HttpProviderService {
       console.log(error);
     }
   }
+
+  async postCliente(cliente: any){
+    try {
+      const response = await Axios.post(`${this.baseUrl}/clientes/`, cliente);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
+  async postPedido(pedido: any) {
+    try {
+      const response = await Axios.post(`${this.baseUrl}/pedidos/`, pedido);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async postComercial(comercial: any) {
+    try {
+      const response = await Axios.post(`${this.baseUrl}/comerciales/`, comercial);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
