@@ -16,6 +16,7 @@ export class AppComponent {
   clientes: string = '';
   myForm: FormGroup;
   myForm2: FormGroup;
+  myForm3: FormGroup;
 
   constructor(private httpProvider: HttpProviderService, private formBuilder: FormBuilder) {
     this.myForm = this.formBuilder.group({
@@ -31,6 +32,12 @@ export class AppComponent {
       fecha: [''],
       cliente: [''],
       comercial: [''],
+    });
+
+    this.myForm3 = this.formBuilder.group({
+      nombre: [''],
+      apellido1: [''],
+      comision: ['']
     });
   }
 
@@ -79,6 +86,17 @@ export class AppComponent {
     try {
       const pedido = this.myForm2.value;
       const res = await this.httpProvider.postPedido(pedido);
+      this.clientes = res;
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async postComercial() {
+    try {
+      const comercial = this.myForm3.value;
+      const res = await this.httpProvider.postComercial(comercial);
       this.clientes = res;
       console.log(res);
     } catch (err) {

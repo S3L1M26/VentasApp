@@ -36,6 +36,19 @@
     <button type="submit">Enviar</button>
 </form>
 
+<form [formGroup]="myForm3" (ngSubmit)="postComercial()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+  
+    <label for="apellido1">Primer Apellido:</label>
+    <input id="apellido1" formControlName="apellido1" type="text" />
+  
+    <label for="comision">Comisión:</label>
+    <input id="comision" formControlName="comision" type="number" />
+  
+    <button type="submit">Enviar</button>
+</form>
+
 <p>{{title}}</p>
 
 <router-outlet />
