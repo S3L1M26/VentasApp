@@ -8,10 +8,6 @@ import { HttpProviderService } from './Service/http-provider.service';
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  template: `
-    <button (click)="getClientes()">Get Clientes</button>
-    <p>{{title}}</p>
-  `
 })
 export class AppComponent {
   title = 'VentasApp';
@@ -19,10 +15,33 @@ export class AppComponent {
 
   constructor(private httpProvider: HttpProviderService) {}
 
-  getClientes() {
-    this.httpProvider.getClientes().then((res) => {
+  async getClientes() {
+    try {
+      const res = await this.httpProvider.getClientes();
       this.clientes = res;
       console.log(res);
-    }).catch((err) => {console.log(err)});
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async getPedidos() {
+    try {
+      const res = await this.httpProvider.getPedidos();
+      this.clientes = res;
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async getComerciales() {
+    try {
+      const res = await this.httpProvider.getComerciales();
+      this.clientes = res;
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   }
 }
