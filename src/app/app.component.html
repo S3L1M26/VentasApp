@@ -1,23 +1,23 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Ventas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/crear-cliente" routerLinkActive="active">Agregar Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/crear-pedido" routerLinkActive="active">Agregar Pedido</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/crear-comercial" routerLinkActive="active">Agregar Comercial</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -26,53 +26,6 @@
 <button (click)="getClientes()">Get Clientes</button>
 <button (click)="getPedidos()">Get Pedidos</button>
 <button (click)="getComerciales()">Get Comerciales</button>
-<form [formGroup]="myForm" (ngSubmit)="postCliente()">
-    <label for="nombre">Nombre:</label>
-    <input id="nombre" formControlName="nombre" type="text" />
-  
-    <label for="apellido1">Primer Apellido:</label>
-    <input id="apellido1" formControlName="apellido1" type="text" />
-  
-    <label for="apellido2">Segundo Apellido:</label>
-    <input id="apellido2" formControlName="apellido2" type="text" />
-  
-    <label for="ciudad">Ciudad:</label>
-    <input id="ciudad" formControlName="ciudad" type="text" />
-  
-    <label for="categoria">Categoría:</label>
-    <input id="categoria" formControlName="categoria" type="text" />
-  
-    <button type="submit">Enviar</button>
-</form>
-
-<form [formGroup]="myForm2" (ngSubmit)="postPedido()">
-    <label for="total">Total:</label>
-    <input id="total" formControlName="total" type="number" />
-  
-    <label for="fecha">Fecha:</label>
-    <input id="fecha" formControlName="fecha" type="date" />
-  
-    <label for="cliente">Cliente:</label>
-    <input id="cliente" formControlName="cliente" type="number" />
-  
-    <label for="comercial">Comercial:</label>
-    <input id="comercial" formControlName="comercial" type="number" />
-  
-    <button type="submit">Enviar</button>
-</form>
-
-<form [formGroup]="myForm3" (ngSubmit)="postComercial()">
-    <label for="nombre">Nombre:</label>
-    <input id="nombre" formControlName="nombre" type="text" />
-  
-    <label for="apellido1">Primer Apellido:</label>
-    <input id="apellido1" formControlName="apellido1" type="text" />
-  
-    <label for="comision">Comisión:</label>
-    <input id="comision" formControlName="comision" type="number" />
-  
-    <button type="submit">Enviar</button>
-</form>
 
 <p>{{title}}</p>
 

@@ -1,0 +1,19 @@
+<p>crear-cliente works!</p>
+<form [formGroup]="myForm" (ngSubmit)="postCliente()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+  
+    <label for="apellido1">Primer Apellido:</label>
+    <input id="apellido1" formControlName="apellido1" type="text" />
+  
+    <label for="apellido2">Segundo Apellido:</label>
+    <input id="apellido2" formControlName="apellido2" type="text" />
+  
+    <label for="ciudad">Ciudad:</label>
+    <input id="ciudad" formControlName="ciudad" type="text" />
+  
+    <label for="categoria">Categoría:</label>
+    <input id="categoria" formControlName="categoria" type="text" />
+  
+    <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,16 @@
+<p>crear-pedido works!</p>
+<form [formGroup]="myForm2" (ngSubmit)="postPedido()">
+    <label for="total">Total:</label>
+    <input id="total" formControlName="total" type="number" />
+  
+    <label for="fecha">Fecha:</label>
+    <input id="fecha" formControlName="fecha" type="date" />
+  
+    <label for="cliente">Cliente:</label>
+    <input id="cliente" formControlName="cliente" type="number" />
+  
+    <label for="comercial">Comercial:</label>
+    <input id="comercial" formControlName="comercial" type="number" />
+  
+    <button type="submit">Enviar</button>
+</form>
