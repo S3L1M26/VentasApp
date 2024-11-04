@@ -23,25 +23,4 @@
     </div>
 </nav>
 
-<div class="container mt-4">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Cliente</th>
-                <th>Fecha</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let pedido of pedidos">
-                <td>{{ pedido.id }}</td>
-                <td>{{ pedido.cliente }}</td>
-                <td>{{ pedido.fecha }}</td>
-                <td>{{ pedido.total }}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 <router-outlet />
