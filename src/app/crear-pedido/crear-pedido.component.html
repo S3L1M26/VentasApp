@@ -1,16 +1,60 @@
-<p>crear-pedido works!</p>
-<form [formGroup]="myForm2" (ngSubmit)="postPedido()">
-    <label for="total">Total:</label>
-    <input id="total" formControlName="total" type="number" />
-  
-    <label for="fecha">Fecha:</label>
-    <input id="fecha" formControlName="fecha" type="date" />
-  
-    <label for="cliente">Cliente:</label>
-    <input id="cliente" formControlName="cliente" type="number" />
-  
-    <label for="comercial">Comercial:</label>
-    <input id="comercial" formControlName="comercial" type="number" />
-  
-    <button type="submit">Enviar</button>
-</form>
+<section class="vh-100" style="background-color: #eee;">
+    <form [formGroup]="myForm2" >
+      <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-50">
+            <div class="col col-lg-9 col-xl-9">
+              <div class="card rounded-3">
+                <div class="card-body p-4">
+                    <div class="container">
+                        <h4 class="text-center my-3 pb-3">Crear Pedido</h4>
+                        <div class="mb-3">
+                          <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <label for="total">Total:</label>
+                              </div>
+                              <div class="col-8">
+                                <input id="total" formControlName="total" type="number" placeholder="3000.1"/>
+                              </div>
+                          </div>
+                        </div> 
+                        <div class="mb-3">
+                          <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <label for="fecha">Fecha:</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="fecha" formControlName="fecha" type="date" />
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="mb-3">
+                          <div class="row g-3 align-items-center">
+                            <div class="col-4">
+                                <label for="cliente">Cliente:</label>
+                            </div>
+                            <div class="col-8">
+                                <input id="cliente" formControlName="cliente" type="number" placeholder="6" />
+                            </div>
+                          </div>
+                        </div>   
+                        <div class="mb-3">
+                            <div class="row g-3 align-items-center">
+                              <div class="col-4">
+                                <label for="comercial">Comercial:</label>
+                              </div>
+                              <div class="col-8">
+                                <input id="comercial" formControlName="comercial" type="number" placeholder="4"/>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">       
+                      <button type="submit" (click)="postPedido()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Enviar</button>         
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+       </div>
+    </form>
+    </section>
