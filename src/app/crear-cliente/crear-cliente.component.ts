@@ -28,8 +28,10 @@ export class CrearClienteComponent {
       const cliente = this.myForm.value;
       const res = await this.httpProvider.postCliente(cliente);
       console.log(res);
+      console.log(this.myForm.value);
     } catch (err) {
       console.log(err);
+      console.log(this.myForm.value);
     }
   }
 

@@ -18,6 +18,7 @@ export class CrearComercialComponent {
     this.myForm3 = this.formBuilder.group({
       nombre: [''],
       apellido1: [''],
+      apellido2: [''],
       comision: ['']
     });
   }
