@@ -1,13 +1,51 @@
-<p>crear-comercial works!</p>
+
+<section class="vh-100" style="background-color: #eee;">
 <form [formGroup]="myForm3" (ngSubmit)="postComercial()">
-    <label for="nombre">Nombre:</label>
-    <input id="nombre" formControlName="nombre" type="text" />
-  
-    <label for="apellido1">Primer Apellido:</label>
-    <input id="apellido1" formControlName="apellido1" type="text" />
-  
-    <label for="comision">Comisión:</label>
-    <input id="comision" formControlName="comision" type="number" />
-  
-    <button type="submit">Enviar</button>
+  <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-50">
+        <div class="col col-lg-9 col-xl-9">
+          <div class="card rounded-3">
+            <div class="card-body p-4">
+                <div class="container">
+                    <h4 class="text-center my-3 pb-3">Formulario para Renovacion</h4>
+                    <div class="mb-3">
+                      <div class="row g-3 align-items-center">
+                        <div class="col-4">
+                          <label for="nombre">Nombre:</label>
+                          </div>
+                          <div class="col-8">
+                            <input id="nombre" formControlName="nombre" type="text" />
+                          </div>
+                      </div>
+                    </div> 
+                    <div class="mb-3">
+                      <div class="row g-3 align-items-center">
+                        <div class="col-4">
+                          <label for="apellido1">Primer Apellido:</label>
+                        </div>
+                        <div class="col-8">
+                          <input id="apellido1" formControlName="apellido1" type="text" />
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="mb-3">
+                      <div class="row g-3 align-items-center">
+                        <div class="col-4">
+                          <label for="comision">Comisión:</label>
+                        </div>
+                        <div class="col-8">
+                          <input id="comision" formControlName="comision" type="number" />
+                        </div>
+                      </div>
+                    </div>   
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">       
+                  <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Enviar</button>         
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+   </div>
 </form>
+</section>
