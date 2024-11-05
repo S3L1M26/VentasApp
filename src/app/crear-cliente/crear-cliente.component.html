@@ -62,6 +62,9 @@
                       <button type="submit" (click)="postCliente()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Enviar</button>         
                   </div>
                 </div>
+                <div *ngIf="showSuccessMessage" class="alert alert-success mt-3" role="alert">
+                  El cliente se creó correctamente.
+                </div>
               </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: #eee;">
+<section class="vh-100" style="background-color: #eee;"> 
     <form [formGroup]="myForm2" >
       <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-50">
@@ -52,9 +52,13 @@
                       <button type="submit" (click)="postPedido()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Enviar</button>         
                   </div>
                 </div>
+                <div *ngIf="showSuccessMessage" class="alert alert-success mt-3" role="alert">
+                  El pedido se creó correctamente.
+                </div>
               </div>
             </div>
         </div>
        </div>
     </form>
     </section>
+
