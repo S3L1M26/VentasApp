@@ -5,6 +5,7 @@ import { HttpProviderService } from '../Service/http-provider.service';
 interface Pedido {
   id: number;
   cliente: string;
+  comercial: string;
   fecha: string;
   total: number;
 }
