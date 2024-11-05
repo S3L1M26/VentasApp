@@ -12,7 +12,7 @@ export class HttpProviderService {
 
   async getClientes() {
     try {
-      const response = await Axios.get('http://127.0.0.1:8000/api/clientes');
+      const response = await Axios.get(`${this.baseUrl}/clientes`);
       return response.data;
     } catch (error) {
       console.error(error);
